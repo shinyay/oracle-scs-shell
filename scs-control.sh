@@ -3,10 +3,10 @@ if [ $# -lt 4 ]; then
 	echo "COMMAND [METHOD] [IDENTITY DOMAIN] [USERNAME] [PASSWORD] ([OPTION])"
   echo "METHOD LIST:"
   echo "GET: List Containers"
-  echo "GETIN: List Objects in the container"
-  echo "PUT: Add Container <OPTION>"
-  echo "DELETE: Delete Object <OPTION>"
-  echo "DELETEALL: Delete Objects in <OPTION>"
+  echo "GETIN: List Objects in the container <OPTION:Container>"
+  echo "PUT: Add Container <OPTION:Container>"
+  echo "DELETE: Delete Object <OPTION:Container>"
+  echo "DELETEALL: Delete Objects in <OPTION:Container>"
   echo "UPLOAD: Upload Object <OPTION1:Container> <OPTION2:FileName> <OPTION3:LocalLocation>"
   exit 1
 fi
