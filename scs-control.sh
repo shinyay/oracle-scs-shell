@@ -43,9 +43,10 @@ delete_objects () {
   echo "DELETES OBJECTS: ${OPT1}"
   get_in_container > SCS-DELETE.lst
   sed -i '1d' SCS-DELETE.lst
-  sed -i -e "s/^/_apaas\//" SCS-DELETE.lst
+  sed -i -e "s/^/${OPT1}\//" SCS-DELETE.lst
   curl -u ${USERNAME}:${PASSWD} -X DELETE -H "Content-Type: text/plain" -T SCS-DELETE.lst \
 	  https://${IDDOMAIN}.storage.oraclecloud.com/v1/Storage-${IDDOMAIN}?bulk-delete
+  delete_object
 
 }
 
