@@ -27,7 +27,7 @@ Usage:
     $(basename ${0}) -m <METHOD> -t <TOKEN> -c <DATACENTER> -i <IDENTITYDOMAIN> --container <CONTAINER>
 Options:
     METHOD         print GET|BULKDELETE
-    DATACENTER     print us2|em2
+    DATACENTER     print us2|em2|ap5
     --container    print container-name
 EOF
 }
