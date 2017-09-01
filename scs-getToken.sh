@@ -20,7 +20,7 @@ $(basename ${0}) is a tool for ...
 Usage:
     $(basename ${0}) -i <IDENTITYDOMAIN> -u <USERNAME> -p <PASSWORD> -c <DATACENTER>
 Options:
-    DATACENTER     print us2|em2
+    DATACENTER     print us2|em2|ap5
 EOF
 }
 
