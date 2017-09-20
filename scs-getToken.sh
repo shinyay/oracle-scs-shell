@@ -11,16 +11,14 @@ version="1.0.0"
 # ##################################################
 
 function mainScript() {
-  curl -v -X GET -H "X-Storage-User: Storage-${IDDOMAIN}:${USERID}" -H "X-Storage-Pass: ${PASSWORD}" https://${DATACENTER}.storage.oraclecloud.com/auth/v1.0
+  curl -v -X GET -H "X-Storage-User: Storage-${IDDOMAIN}:${USERID}" -H "X-Storage-Pass: ${PASSWORD}" https://${IDDOMAIN}.storage.oraclecloud.com/auth/v1.0
 }
 
 function usage() {
     cat <<EOF
 $(basename ${0}) is a tool for ...
 Usage:
-    $(basename ${0}) -i <IDENTITYDOMAIN> -u <USERNAME> -p <PASSWORD> -c <DATACENTER>
-Options:
-    DATACENTER     print us2|em2|ap5
+    $(basename ${0}) -i <IDENTITYDOMAIN> -u <USERNAME> -p <PASSWORD>
 EOF
 }
 
@@ -58,10 +56,6 @@ do
             PASSWORD=${2}
             shift
         ;;
-        --datacenter|-c)
-            DATACENTER=${2}
-	    shift
-	;;
         *)
             echo "[ERROR] Invalid option '${1}'"
             usage
